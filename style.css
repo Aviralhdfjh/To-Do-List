@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    padding: 10px;
+}
+.to-do{
+    background-color: #fff;
+    max-width: 545px;
+    margin: 100px auto;
+    padding: 40px 30px 70px;
+    border-radius: 5px;
+}
+.to-do h2{
+    color: #002765;
+    display:flex;
+    align-items: center;
+    margin-bottom:  10px;
+}
+.to-do h2 img{
+    width: 35px;
+}
+.to-do:hover{
+    box-shadow: 1px 2px 2px 3px black;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #efe2ef;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #0a9c10;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: #068051;
+}
+ul li{
+    position: relative;
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px ;
+    user-select: none;
+    cursor: pointer;
+}
+ul li::before{
+    content: ' ';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(Images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 16px;
+}
+ul li.check{
+color: #555;
+text-decoration: line-through;
+}
+ul li.check::before{
+color: #666;
+background-image: url(Images/checked.jpg);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #f3f3f3;
+}
+body.dark-mode {
+    background: linear-gradient(185deg, #0a0a0a, #222222);
+    color: #ffffff;
+}
+
+body.dark-mode .to-do {
+    background-color: #1f1f1f;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode input,
+body.dark-mode .row {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode button {
+    background-color: #444;
+}
+
+body.dark-mode button:hover {
+    background-color: #666;
+}
+
+body.dark-mode ul li {
+    color: #ccc;
+}
+
+body.dark-mode ul li.check {
+    color: #888;
+    text-decoration: line-through;
+}
+ul li {
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.4s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+body.dark-mode .container {
+    background: linear-gradient(135deg, #0d0d0d, #1c1c1c);
+}
+body.dark-mode .to-do h2 {
+    color: #fff;
+}
+body.dark-mode .to-do h2 img {
+    filter: brightness(0) invert(1);
+}
+body.dark-mode .to-do:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+body.dark-mode .to-do h2 img {
+    filter: brightness(0) invert(1);
+}

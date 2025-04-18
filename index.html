@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="to-do">
+            <h2>
+                To-Do List <img src="Images/notes.png" alt="Notes Icon">
+                <button id="theme-toggle" style="margin-left:auto;">🌙</button>
+              </h2>
+              
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Enter your text here:">
+                <button onclick="addtask()">ADD</button>
+            </div>
+            <div>
+                <ul id="list-container">
+                    <li class="list-item">
+                        <input type="checkbox" id="check-box" onclick="check(this)">
+                        <label for="check-box">Task 1</label>
+                        <button class="delete-btn" onclick="deleteTask(this)">Delete</button>
+                    </li>
+                    <li class="list-item">
+                        <input type="checkbox" id="check-box" onclick="check(this)">
+                        <label for="check-box">Task 2</label>
+                        <button class="delete-btn" onclick="deleteTask(this)">Delete</button>
+                    </li>
+                    <li class="list-item">
+                        <input type="checkbox" id="check-box" onclick="check(this)">
+                        <label for="check-box">Task 3</label>
+                        <button class="delete-btn" onclick="deleteTask(this)">Delete</button>
+                </ul>
+            </div>
+        </div>
+    </div>
+  <script src="script.js"></script>  
+</body>
+</html>
